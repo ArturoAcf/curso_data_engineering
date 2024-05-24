@@ -2,6 +2,9 @@ version: 2
 
 models:
   - name: stg_sql_server_dbo__addresses
+    config:
+      contract:
+        enforced: true
     description: ""
     columns:
       - name: address_id
@@ -213,6 +216,9 @@ models:
 
   - name: stg_sql_server_dbo__users
     description: ""
+    config:
+      contract:
+        enforced: true
     columns:
       - name: user_id
         data_type: varchar
@@ -252,6 +258,8 @@ models:
 
       - name: _fivetran_deleted
         data_type: boolean
+        # constraints:
+        #   - type: not_null
         description: ""
 
       - name: date_load
