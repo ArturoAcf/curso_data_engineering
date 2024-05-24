@@ -2,8 +2,8 @@ version: 2
 
 sources:
 
-  - name: google_sheets # name of the source 
-    schema: google_sheets # this is the schema our raw data lives in
+  - name: sql_server_dbo # name of the source 
+    schema: sql_server_dbo # this is the schema our raw data lives in
     database: ALUMNO5DEVBRONZEDB # this is the name of our database
 
     quoting:
