@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stg_google_sheets__budget
+    description: ""
+    columns:
+      - name: _row
+        data_type: number
+        description: ""
+
+      - name: product_id
+        data_type: varchar
+        description: ""
+
+      - name: quantity
+        data_type: number
+        description: ""
+
+      - name: month
+        data_type: date
+        description: ""
+
+      - name: date_load
+        data_type: timestamp_tz
+        description: ""
