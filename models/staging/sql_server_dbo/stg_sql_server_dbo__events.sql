@@ -18,7 +18,7 @@ renamed as (
         created_at,
         order_id,
         _fivetran_deleted,
-        _fivetran_synced AS date_load
+        _fivetran_synced AS date_load_UTC
 
     from source
 
