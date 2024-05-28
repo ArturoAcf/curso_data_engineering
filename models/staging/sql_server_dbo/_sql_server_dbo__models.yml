@@ -9,15 +9,20 @@ models:
     columns:
       - name: address_id
         data_type: varchar
-        description: ""
+        description: "ID de la direccion"
+        tests:
+          - unique
+          - not_null
 
       - name: zipcode
         data_type: number
-        description: ""
+        description: "Codigo postal"
+        tests:
+          - positive_numbers
 
       - name: country
         data_type: varchar
-        description: ""
+        description: "Pais"
 
       - name: address
         data_type: varchar
@@ -31,7 +36,7 @@ models:
         data_type: boolean
         description: ""
 
-      - name: date_load
+      - name: date_load_UTC
         data_type: timestamp_tz
         description: ""
 
@@ -74,7 +79,7 @@ models:
         data_type: boolean
         description: ""
 
-      - name: date_load
+      - name: date_load_UTC
         data_type: timestamp_tz
         description: ""
 
@@ -97,7 +102,7 @@ models:
         data_type: boolean
         description: ""
 
-      - name: date_load
+      - name: date_load_UTC
         data_type: timestamp_tz
         description: ""
 
@@ -112,7 +117,7 @@ models:
         data_type: varchar
         description: ""
 
-      - name: shipping_cost
+      - name: shipping_cost_euros
         data_type: float
         description: ""
 
@@ -160,7 +165,7 @@ models:
         data_type: boolean
         description: ""
 
-      - name: date_load
+      - name: date_load_UTC
         data_type: timestamp_tz
         description: ""
 
@@ -187,7 +192,7 @@ models:
         data_type: boolean
         description: ""
 
-      - name: date_load
+      - name: date_load_UTC
         data_type: timestamp_tz
         description: ""
 
@@ -198,7 +203,11 @@ models:
         data_type: varchar
         description: ""
 
-      - name: discount
+      - name: promo_name
+        data_type: varchar
+        description: ""
+
+      - name: discount_euros
         data_type: number
         description: ""
 
@@ -210,7 +219,7 @@ models:
         data_type: boolean
         description: ""
 
-      - name: date_load
+      - name: date_load_UTC
         data_type: timestamp_tz
         description: ""
 
@@ -262,6 +271,17 @@ models:
         #   - type: not_null
         description: ""
 
-      - name: date_load
+      - name: date_load_UTC
         data_type: timestamp_tz
+        description: ""
+
+  - name: stg_sql_server_dbo__shipping_service
+    description: ""
+    columns:
+      - name: shipping_service_id
+        data_type: varchar
+        description: ""
+
+      - name: shipping_service_name
+        data_type: varchar
         description: ""
