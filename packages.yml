@@ -4,3 +4,8 @@ packages:
 # https://hub.getdbt.com/dbt-labs/codegen/latest/
   - package: dbt-labs/codegen
     version: 0.12.1
+
+# calogica
+# https://github.com/calogica/dbt-date | https://hub.getdbt.com/calogica/dbt_date/latest/
+  - package: calogica/dbt_date
+    version: [">=0.9.0", "<0.10.0"]

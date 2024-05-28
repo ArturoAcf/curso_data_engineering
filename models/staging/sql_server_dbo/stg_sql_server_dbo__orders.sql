@@ -26,8 +26,8 @@ renamed as (
         user_id,
         order_total,
         delivered_at,
-        tracking_id,
-        status,
+        IFF(tracking_id = '', null, tracking_id) as tracking_id,
+        md5(status) as order_status_id,
         _fivetran_deleted,
         _fivetran_synced AS date_load_UTC
 
