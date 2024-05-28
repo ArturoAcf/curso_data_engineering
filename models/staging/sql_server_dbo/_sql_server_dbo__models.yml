@@ -113,7 +113,7 @@ models:
         data_type: varchar
         description: ""
 
-      - name: shipping_service
+      - name: shipping_id
         data_type: varchar
         description: ""
 
@@ -157,7 +157,7 @@ models:
         data_type: varchar
         description: ""
 
-      - name: status
+      - name: status_id
         data_type: varchar
         description: ""
 
@@ -283,5 +283,27 @@ models:
         description: ""
 
       - name: shipping_service_name
+        data_type: varchar
+        description: ""
+
+  - name: stg_sql_server_dbo__order_status
+    description: ""
+    columns:
+      - name: order_status_id
+        data_type: varchar
+        description: ""
+
+      - name: order_status
+        data_type: varchar
+        description: ""
+
+  - name: stg_sql_server_dbo__promo_status
+    description: ""
+    columns:
+      - name: promo_status_id
+        data_type: varchar
+        description: ""
+
+      - name: promo_status
         data_type: varchar
         description: ""

@@ -12,7 +12,7 @@ renamed as (
         md5(promo_id) as promo_id,
         promo_id as nombre_promo,
         discount as discount_euros,
-        status,
+        md5(status) as promo_status_id,
         _fivetran_deleted,
         _fivetran_synced AS date_load_UTC
 
@@ -22,7 +22,7 @@ renamed as (
         md5('sin_promo'),
         'sin_promo',
         0,
-        'inactive',
+        md5('inactive'),
         null,
         null
 )
