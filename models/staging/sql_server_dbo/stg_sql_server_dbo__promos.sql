@@ -11,7 +11,7 @@ renamed as (
     select
         md5(promo_id) as promo_id,
         promo_id as nombre_promo,
-        discount as discount_euros,
+        discount as discount_dollar,
         md5(status) as promo_status_id,
         _fivetran_deleted,
         _fivetran_synced AS date_load_UTC

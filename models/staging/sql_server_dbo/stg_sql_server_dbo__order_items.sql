@@ -11,7 +11,7 @@ renamed as (
     select
         order_id,
         product_id,
-        quantity,
+        quantity as product_quantity,
         _fivetran_deleted,
         _fivetran_synced AS date_load_UTC
 
