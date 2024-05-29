@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: stg_sql_server_dbo__addresses
-    description: ""
+    description: "Direcciones"
     columns:
       - name: address_id
         data_type: varchar
@@ -33,7 +33,7 @@ models:
         description: ""
 
   - name: stg_sql_server_dbo__events
-    description: ""
+    description: "Eventos"
     columns:
       - name: event_id
         data_type: varchar
@@ -92,7 +92,7 @@ models:
         description: ""
 
   - name: stg_sql_server_dbo__order_items
-    description: ""
+    description: "Relación entre pedido y producto"
     columns:
       - name: order_id
         data_type: varchar
@@ -123,7 +123,7 @@ models:
         description: ""
 
   - name: stg_sql_server_dbo__orders
-    description: ""
+    description: "Pedidos"
     columns:
       - name: order_id
         data_type: varchar
@@ -206,7 +206,7 @@ models:
         description: ""
 
   - name: stg_sql_server_dbo__products
-    description: ""
+    description: "Prodcutos"
     columns:
       - name: product_id
         data_type: varchar
@@ -233,7 +233,7 @@ models:
         description: ""
 
   - name: stg_sql_server_dbo__promos
-    description: ""
+    description: "Promociones"
     columns:
       - name: promo_id
         data_type: varchar
@@ -264,7 +264,7 @@ models:
         description: ""
 
   - name: stg_sql_server_dbo__users
-    description: ""
+    description: "Usuarios"
     columns:
       - name: user_id
         data_type: varchar
@@ -306,6 +306,10 @@ models:
         data_type: varchar
         description: ""
 
+      - name: is_valid_email_address
+        data_type: boolean
+        description: ""
+
       - name: _fivetran_deleted
         data_type: boolean
         description: ""
@@ -315,7 +319,7 @@ models:
         description: ""
 
   - name: stg_sql_server_dbo__shipping_service
-    description: ""
+    description: "Empresa de envio"
     columns:
       - name: shipping_service_id
         data_type: varchar
@@ -326,7 +330,7 @@ models:
         description: ""
 
   - name: stg_sql_server_dbo__promo_status
-    description: ""
+    description: "estado de promocion"
     columns:
       - name: promo_status_id
         data_type: varchar
@@ -337,7 +341,7 @@ models:
         description: ""
 
   - name: stg_sql_server_dbo__order_status
-    description: ""
+    description: "Estado de pedido"
     columns:
       - name: order_status_id
         data_type: varchar
@@ -348,7 +352,7 @@ models:
         description: ""
 
   - name: stg_sql_server_dbo__event_type
-    description: ""
+    description: "Tipo de evento"
     columns:
       - name: event_type_id
         data_type: varchar
