@@ -11,7 +11,7 @@ renamed as (
     select
         event_id,
         page_url,
-        md5(event_type) as event_type_id,
+        event_type,
         user_id,
         case
             when product_id = '' then md5('producto_vacio')
