@@ -17,10 +17,7 @@ renamed as (
         shipping_cost as shipping_cost_dollar,
         address_id,
         created_at as created_at_utc,
-        case
-            when promo_id != '' then md5('sin_promo')
-            else md5(promo_id)
-        end as promo_id,
+        IFF(promo_id = '', md5('sin_promo'), md5(promo_id)) as promo_id,
         estimated_delivery_at as estimated_delivery_at_utc,
         order_cost as order_cost_dollar,
         user_id,
