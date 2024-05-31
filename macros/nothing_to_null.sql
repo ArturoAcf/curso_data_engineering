@@ -1,3 +1,3 @@
-{% macro nothing_to_null(columna) %}
-    ({{ column_name }} / 100)::numeric(16, {{ scale }})
+{% macro nothing_to_null(column_name) %}
+    IFF({{column_name}} = '', null, {{column_name}})
 {% endmacro %}
