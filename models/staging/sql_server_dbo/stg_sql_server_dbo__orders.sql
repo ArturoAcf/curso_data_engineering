@@ -23,7 +23,8 @@ renamed as (
         user_id,
         order_total as order_total_dollar,
         delivered_at as delivered_at_utc,
-        IFF(tracking_id = '', null, tracking_id) as tracking_id,
+        -- IFF(tracking_id = '', null, tracking_id) as tracking_id,
+        {{ nothing_to_null('tracking_id') }} as tracking_id,
         md5(status) as order_status_id,
         _fivetran_deleted,
         _fivetran_synced AS date_load_UTC
