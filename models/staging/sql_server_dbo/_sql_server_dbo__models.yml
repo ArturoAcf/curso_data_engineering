@@ -372,17 +372,17 @@ models:
         description: ""
 
   - name: base_sql_server_dbo__orders
-    description: "Pedidos (base)"
+    description: "Pedidos"
     columns:
       - name: order_id
         data_type: varchar
         description: ""
 
-      - name: shipping_service
+      - name: shipping_service_
         data_type: varchar
         description: ""
 
-      - name: shipping_cost
+      - name: shipping_cost_dollar
         data_type: float
         description: ""
 
@@ -390,7 +390,7 @@ models:
         data_type: varchar
         description: ""
 
-      - name: created_at
+      - name: created_at_utc
         data_type: timestamp_tz
         description: ""
 
@@ -398,11 +398,11 @@ models:
         data_type: varchar
         description: ""
 
-      - name: estimated_delivery_at
+      - name: estimated_delivery_at_utc
         data_type: timestamp_tz
         description: ""
 
-      - name: order_cost
+      - name: order_cost_dollar
         data_type: float
         description: ""
 
@@ -410,11 +410,11 @@ models:
         data_type: varchar
         description: ""
 
-      - name: order_total
+      - name: order_total_dollar
         data_type: float
         description: ""
 
-      - name: delivered_at
+      - name: delivered_at_utc
         data_type: timestamp_tz
         description: ""
 
@@ -422,7 +422,7 @@ models:
         data_type: varchar
         description: ""
 
-      - name: order_status
+      - name: status
         data_type: varchar
         description: ""
 
@@ -430,7 +430,7 @@ models:
         data_type: boolean
         description: ""
 
-      - name: _fivetran_synced
+      - name: date_load_utc
         data_type: timestamp_tz
         description: ""
 
@@ -441,7 +441,7 @@ models:
         data_type: varchar
         description: ""
 
-      - name: discount
+      - name: discount_dollar
         data_type: number
         description: ""
 
@@ -453,6 +453,6 @@ models:
         data_type: boolean
         description: ""
 
-      - name: _fivetran_synced
+      - name: date_load_utc
         data_type: timestamp_tz
         description: ""
