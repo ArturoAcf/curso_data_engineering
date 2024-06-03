@@ -14,20 +14,20 @@ renamed as (
             when shipping_service != '' then md5(shipping_service)
             else md5('no_shipping_service')
         end as shipping_service_id,
-        shipping_cost as shipping_cost_dollar,
+        shipping_cost_dollar,
         address_id,
-        created_at as created_at_utc,
+        created_at_utc,
         IFF(promo_id = '', md5('sin_promo'), md5(promo_id)) as promo_id,
-        estimated_delivery_at as estimated_delivery_at_utc,
-        order_cost as order_cost_dollar,
+        estimated_delivery_at_utc,
+        order_cost_dollar,
         user_id,
-        order_total as order_total_dollar,
-        delivered_at as delivered_at_utc,
+        order_total_dollar,
+        delivered_at_utc,
         -- IFF(tracking_id = '', null, tracking_id) as tracking_id,
         {{ nothing_to_null('tracking_id') }} as tracking_id,
         md5(status) as order_status_id,
         _fivetran_deleted,
-        _fivetran_synced AS date_load_UTC
+        date_load_UTC
 
     from source
     union all

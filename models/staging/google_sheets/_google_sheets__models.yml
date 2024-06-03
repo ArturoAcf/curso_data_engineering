@@ -31,7 +31,7 @@ models:
           - type: not_null
         description: ""
 
-      - name: date_load
+      - name: date_load_utc
         data_type: timestamp_tz
         constraints:
           - type: not_null

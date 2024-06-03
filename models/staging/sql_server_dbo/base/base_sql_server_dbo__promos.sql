@@ -10,10 +10,10 @@ renamed as (
 
     select
         promo_id,
-        discount,
+        discount as discount_dollar,
         status,
         _fivetran_deleted,
-        _fivetran_synced
+        _fivetran_synced as date_load_utc
 
     from source
 )

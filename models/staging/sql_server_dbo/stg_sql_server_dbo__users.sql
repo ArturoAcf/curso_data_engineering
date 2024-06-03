@@ -20,7 +20,7 @@ renamed as (
         updated_at as updated_at_utc,
         total_orders,
         _fivetran_deleted,
-        _fivetran_synced AS date_load_UTC
+        _fivetran_synced as date_load_utc
 
     from source
 
