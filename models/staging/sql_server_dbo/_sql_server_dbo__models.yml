@@ -456,3 +456,5 @@ models:
       - name: date_load_utc
         data_type: timestamp_tz
         description: ""
+
+# Usar para las descripciones ficheros markdown

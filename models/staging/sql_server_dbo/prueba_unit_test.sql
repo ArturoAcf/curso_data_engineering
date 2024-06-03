@@ -17,3 +17,5 @@ validate_users_email as (
 )
 
 select * from validate_users_email
+
+-- Enfocado a funcionalidades. Por ejemplo, comprobar si cierta columna es realmente resultado de cierto cálculo.
