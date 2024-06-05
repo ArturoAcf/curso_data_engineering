@@ -13,17 +13,17 @@ renamed as (
         shipping_service,
         shipping_cost as shipping_cost_dollar,
         address_id,
-        created_at as created_at_utc,
+        {{set_to_utc('created_at')}} as created_at_utc,
         promo_id,
-        estimated_delivery_at as estimated_delivery_at_utc,
+        {{set_to_utc('estimated_delivery_at')}} as estimated_delivery_at_utc,
         order_cost as order_cost_dollar,
         user_id,
         order_total as order_total_dollar,
-        delivered_at as delivered_at_utc,
+        {{set_to_utc('delivered_at')}} as delivered_at_utc,
         tracking_id,
         status,
         _fivetran_deleted,
-        _fivetran_synced as date_load_utc
+        {{set_to_utc('_fivetran_synced')}} as date_load_utc
 
     from source
 )
