@@ -1,3 +1,5 @@
+# Faltan contratos (sources), tests y descripciones. He creado lo mínimo para hacer pruebas.
+
 version: 2
 
 models:

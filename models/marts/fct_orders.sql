@@ -9,19 +9,19 @@ source_order_items as (
 ),
 
 source_products as (
-    select * from {{ ref('dim_products') }}
+    select * from {{ ref('stg_sql_server_dbo__products') }}
 ),
 
 source_promos as (
-    select * from {{ ref('dim_promos') }}
+    select * from {{ ref('stg_sql_server_dbo__promos') }}
 ),
 
 fct_orders as (
     select
+        rank() over(partition by so.order_id order by so_i.product_id) as _row,
         so.order_id,
         so_i.product_id,
         so_i.product_quantity,
-        sp.price_dollar as price_per_product_dollar,
         (sp.price_dollar*so_i.product_quantity) as price_per_quantity_od_products,
         so.shipping_service_id,
         so.shipping_cost_dollar,
@@ -43,7 +43,7 @@ fct_orders as (
     on so_i.product_id = sp.product_id
     join source_promos spr
     on so.promo_id = spr.promo_id
-    order by order_id
+    order by order_id, _row
 )
 
 select * from fct_orders
