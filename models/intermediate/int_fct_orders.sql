@@ -22,13 +22,13 @@ fct_orders as (
         so.order_id,
         so_i.product_id,
         so_i.product_quantity,
-        (sp.price_dollar*so_i.product_quantity) as price_per_quantity_od_products,
+        (sp.price_dollar*so_i.product_quantity) as price_per_quantity_of_products,
         so.shipping_service_id,
         so.shipping_cost_dollar,
         so.promo_id,
         spr.discount_dollar,
-        -- so.order_cost_dollar,
-        -- so.order_total_dollar, -> El problema es como con el resto. Todo lo asociado a orders se repite.
+        so.order_cost_dollar,
+        so.order_total_dollar, -- -> El problema es como con el resto. Todo lo asociado a orders se repite.
         so.user_id,
         so.address_id,
         so.created_at_utc,
