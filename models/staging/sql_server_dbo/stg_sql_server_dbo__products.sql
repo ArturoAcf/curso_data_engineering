@@ -14,7 +14,7 @@ renamed as (
         name,
         inventory,
         _fivetran_deleted,
-        _fivetran_synced as date_load_utc
+        {{set_to_utc('_fivetran_synced')}} as date_load_utc
 
     from source
     union all

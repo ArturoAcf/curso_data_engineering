@@ -18,13 +18,13 @@ renamed as (
             else product_id
         end as product_id,
         session_id,
-        created_at as created_at_utc,
+        {{set_to_utc('created_at')}} as created_at_utc,
         case
             when order_id = '' then md5('void_order')
             else order_id
         end as order_id,
         _fivetran_deleted,
-        _fivetran_synced as date_load_utc
+        {{set_to_utc('_fivetran_synced')}} as date_load_utc
     from source
 
 )
