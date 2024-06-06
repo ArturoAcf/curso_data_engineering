@@ -47,3 +47,7 @@ fct_orders as (
 )
 
 select * from fct_orders
+
+-- Esto es dimensión. Pasas las medidas y tal a la facts que si se pueden repetir esos valores | Buscar división
+-- Dividir fecha+hora en fecha y hora por separado
+-- Las fechas que sean tipo fecha (No hashear vaya)

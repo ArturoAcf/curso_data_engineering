@@ -15,7 +15,7 @@ renamed as (
         user_id,
         product_id,
         session_id,
-        created_at_utc,
+        {{ set_to_utc('created_at_utc') }} as created_at_utc,
         order_id,
         _fivetran_deleted,
         date_load_utc
